@@ -6,78 +6,79 @@
 
   <title>EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.</title>
   <meta name="description" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence. Technology that feels human, even at Exa→Zetta→Yotta scale." />
-  <meta name="keywords" content="EZYByte, Artificial Intelligence, AI, automation, data, analytics, cloud, edge, agents, orchestration, human-centered AI" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://ezybyte-com.github.io/" />
   <meta name="theme-color" content="#0b1020">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Exo+2:wght@700;800;900&display=swap" rel="stylesheet">
-
+  <!-- Favicons (theme-aware) -->
   <link id="favicon-dark" rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
   <link id="favicon-light" rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
 
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
   <meta property="og:description" content="Technology that feels human, even at Yotta-scale.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="og-image.png">
   <meta property="og:url" content="https://ezybyte-com.github.io/">
-
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
-  <meta name="twitter:description" content="Technology that feels human, even at Yotta-scale.">
-  <meta name="twitter:image" content="og-image.png">
 
   <style>
-    :root{
-      --bg:#0b1020; --bg-2:#121a36; --text:#e9ecf4; --muted:#b6bdd5;
-      --border:rgba(255,255,255,.08);
-      --c1:#2979FF; --c2:#7E57C2; --c3:#FF3FD1; --c4:#00E5FF;
+    :root {
+      --bg: #0b1020;
+      --bg-2: #121a36;
+      --text: #e9ecf4;
+      --muted: #b6bdd5;
+      --border: rgba(255,255,255,.08);
+      --c1: #2979FF; --c2: #7E57C2; --c3: #FF3FD1; --c4: #00E5FF;
     }
-    [data-theme="light"]{
-      --bg:#f7f8ff; --bg-2:#ffffff; --text:#0f1330; --muted:#4a5277;
-      --border:rgba(0,0,0,.08);
+    [data-theme="light"] {
+      --bg: #f7f8ff;
+      --bg-2: #ffffff;
+      --text: #0f1330;
+      --muted: #4a5277;
+      --border: rgba(0,0,0,.08);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text);
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
+      color: var(--text);
       background:
         radial-gradient(900px 600px at 15% 10%, color-mix(in oklab, var(--c4) 10%, transparent), transparent 60%),
         radial-gradient(900px 600px at 85% 15%, color-mix(in oklab, var(--c3) 8%, transparent), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg-2));
-      background-attachment:fixed;
+      background-attachment: fixed;
     }
-    .container{width:min(1100px,92%); margin:0 auto}
-    .topbar{position:fixed; top:14px; right:14px; display:flex; gap:8px; align-items:center; z-index:10}
-    .toggle{appearance:none; width:56px; height:32px; border-radius:999px; position:relative; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); cursor:pointer}
-    .toggle::after{content:""; position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%; background:linear-gradient(180deg,#fff,#dfe6ff); transition:transform .25s ease}
-    [data-theme="light"] .toggle::after{transform:translateX(24px); background:linear-gradient(180deg,#0f1330,#2b356e)}
-    .toggle-label{font-size:12px; color:var(--muted); user-select:none}
+    .container { width: min(1100px, 92%); margin: 0 auto; }
 
-    header.hero{padding:98px 0 56px; text-align:center}
-    .brandline{display:inline-flex; align-items:center; gap:14px}
-    .infinity{width:36px; height:36px; opacity:.95}
-    .wordmark{width:clamp(300px,48vw,660px); height:auto}
-    .wordmark-fallback{margin:0; font-family:'Exo 2',sans-serif; font-weight:800; letter-spacing:.5px; font-size:clamp(36px,7vw,64px); background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3)); -webkit-background-clip:text; background-clip:text; color:transparent; display:none;}
-    .tagline{margin-top:14px; font-weight:700; letter-spacing:.25px; color:color-mix(in oklab, var(--text) 90%, transparent);}
-    .hero-sub{max-width:980px; margin:22px auto 0; line-height:1.75; color:color-mix(in oklab, var(--text) 82%, transparent)}
-    .hero-sub p{margin:0 0 14px 0}
-    .hero-sub .closing{margin-top:8px; font-weight:700}
-    .cta{margin-top:28px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
-    .btn{padding:12px 18px; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color:var(--text); font-weight:700}
-    .btn.primary{border:none; color:#fff; background:linear-gradient(90deg, var(--c1), var(--c2), var(--c3))}
-    .section{padding:64px 0}
-    .divider{height:1px; margin:22px auto; width:min(900px,90%); background:linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent)}
-    .cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin-top:22px}
-    .card{background:linear-gradient(180deg, color-mix(in oklab, var(--bg) 86%, #ffffff 14%), color-mix(in oklab, var(--bg-2) 86%, #ffffff 14%)); border:1px solid var(--border); padding:22px; border-radius:16px}
-    footer{border-top:1px solid var(--border); padding:24px 0 56px; color:var(--muted); font-size:14px}
+    /* Theme toggle */
+    .topbar { position: fixed; top: 14px; right: 14px; display: flex; gap: 8px; align-items: center; z-index: 10; }
+    .toggle {
+      appearance: none; width: 56px; height: 32px; border-radius: 999px; position: relative;
+      border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); cursor: pointer;
+    }
+    .toggle::after {
+      content: ""; position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
+      background: linear-gradient(180deg, #fff, #dfe6ff); transition: transform .25s ease;
+    }
+    [data-theme="light"] .toggle::after { transform: translateX(24px); background: linear-gradient(180deg, #0f1330, #2b356e); }
+    .toggle-label { font-size: 12px; color: var(--muted); user-select: none; }
+
+    /* Hero */
+    header.hero { padding: 96px 0 40px; text-align: center; }
+    .logo { width: clamp(220px, 42vw, 520px); height: auto; display: block; margin: 0 auto 14px; }
+    .tagline { margin-top: 6px; font-weight: 700; letter-spacing: .25px; color: color-mix(in oklab, var(--text) 90%, transparent); }
+    .story { max-width: 980px; margin: 18px auto 0; line-height: 1.75; color: color-mix(in oklab, var(--text) 84%, transparent); }
+    .story p { margin: 0 0 12px 0; }
+    .story .closing { margin-top: 8px; font-weight: 800; }
+
+    .cta { margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border);
+           background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color: var(--text); font-weight: 700; }
+    .btn.primary { border: none; color: #fff; background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3)); }
+    .btn:hover { text-decoration: none; filter: saturate(1.05); }
+
+    footer { border-top: 1px solid var(--border); padding: 24px 0 56px; color: var(--muted); font-size: 14px; text-align: center; }
   </style>
 </head>
 <body>
@@ -89,19 +90,16 @@
 
   <header class="hero">
     <div class="container">
-      <div class="brandline">
-        <img class="infinity" src="infinity.svg" alt="EZYByte infinity symbol" />
-        <img class="wordmark" src="ezybyte-wordmark.svg" alt="EZYByte wordmark" onerror="this.style.display='none'; document.querySelector('.wordmark-fallback').style.display='block';" />
-        <h1 class="wordmark-fallback">EZYByte</h1>
-      </div>
+      <!-- Use the provided brand logo image. No text wordmark. -->
+      <img class="logo" src="ezybyte-logo.png" alt="EZYByte logo" />
 
       <div class="tagline">Humanly Intelligent. Powered by Artificial Intelligence.</div>
 
-      <div class="hero-sub">
+      <div class="story">
         <p>In a world accelerating toward <strong>Exa-, Zetta-, and Yotta-scale</strong> data, <strong>EZYByte</strong> was founded on a single belief:</p>
         <p><strong>Technology should feel human — even when it’s powered by machines.</strong></p>
-        <p><strong>EZYByte</strong> unites the limitless power of AI with the intuition and empathy of human design.<br/>We don’t just build systems that think faster — we build systems that think with purpose.</p>
-        <p>Our mission is not to outsmart people, but to empower them.<br/>Because true progress lies at the intersection of <strong>Artificial Intelligence</strong> and <strong>Human Intelligence</strong>.</p>
+        <p><strong>EZYByte</strong> unites the limitless power of AI with the intuition and empathy of human design. We don’t just build systems that think faster — we build systems that think with purpose.</p>
+        <p>Our mission is not to outsmart people, but to empower them. Because true progress lies at the intersection of <strong>Artificial Intelligence</strong> and <strong>Human Intelligence</strong>.</p>
         <p class="closing"><strong>EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.</strong></p>
       </div>
 
@@ -112,5 +110,48 @@
       </div>
     </div>
   </header>
+
+  <footer>
+    <div class="container">
+      © 2025 EZYByte • <span style="opacity:.85">Humanly Intelligent • AI-Powered</span>
+    </div>
+  </footer>
+
+  <script>
+    // Robust theme init + toggle + favicon swap (no service worker involved)
+    (function() {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const stored = localStorage.getItem('ezybyte-theme');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+      function apply(theme) {
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('ezybyte-theme', theme);
+        // Swap favicon for browsers that don't respect media queries on <link>
+        const dark = document.getElementById('favicon-dark');
+        const light = document.getElementById('favicon-light');
+        if (dark && light) {
+          if (theme === 'light') { light.media = 'all'; dark.media = 'not all'; }
+          else { dark.media = 'all'; light.media = 'not all'; }
+        }
+        toggle.checked = (theme === 'light');
+      }
+
+      // Initialize
+      const initial = stored || (prefersLight ? 'light' : 'dark');
+      apply(initial);
+
+      // Listen to user toggle
+      toggle.addEventListener('change', () => apply(toggle.checked ? 'light' : 'dark'));
+
+      // Also listen to system theme changes
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+          if (!localStorage.getItem('ezybyte-theme')) apply(e.matches ? 'dark' : 'light');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
