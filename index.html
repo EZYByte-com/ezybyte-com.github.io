@@ -11,119 +11,73 @@
   <link rel="canonical" href="https://ezybyte-com.github.io/" />
   <meta name="theme-color" content="#0b1020">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Exo+2:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Theme-aware Favicons -->
   <link id="favicon-dark" rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
   <link id="favicon-light" rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
 
-  <!-- PWA Manifest & Apple -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
   <meta property="og:description" content="Technology that feels human, even at Yotta-scale.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="og-image.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://ezybyte-com.github.io/">
 
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
   <meta name="twitter:description" content="Technology that feels human, even at Yotta-scale.">
   <meta name="twitter:image" content="og-image.png">
 
-  <!-- Google Analytics (replace G-XXXXXXXXXX with your measurement ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX'); // TODO: replace with your GA4 Measurement ID
-  </script>
-
   <style>
-    :root {
-      --bg: #0b1020; --bg-2: #121a36; --text: #e9ecf4; --muted: #b6bdd5;
-      --card: #161c3a; --card-2: #0f1530; --border: rgba(255,255,255,.08);
-      --c1: #2979FF; --c2: #7E57C2; --c3: #FF3FD1; --c4: #00E5FF;
-      --shadow: 0 20px 60px rgba(0,0,0,.35);
+    :root{
+      --bg:#0b1020; --bg-2:#121a36; --text:#e9ecf4; --muted:#b6bdd5;
+      --border:rgba(255,255,255,.08);
+      --c1:#2979FF; --c2:#7E57C2; --c3:#FF3FD1; --c4:#00E5FF;
     }
-    [data-theme="light"] {
-      --bg: #f7f8ff; --bg-2: #ffffff; --text: #0f1330; --muted: #4a5277;
-      --card: #ffffff; --card-2: #f2f4ff; --border: rgba(0,0,0,.08);
-      --shadow: 0 12px 36px rgba(9,12,40,.12);
+    [data-theme="light"]{
+      --bg:#f7f8ff; --bg-2:#ffffff; --text:#0f1330; --muted:#4a5277;
+      --border:rgba(0,0,0,.08);
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(900px 600px at 15% 10%, color-mix(in oklab, var(--c4) 12%, transparent), transparent 60%),
-        radial-gradient(900px 600px at 85% 15%, color-mix(in oklab, var(--c3) 10%, transparent), transparent 60%),
+        radial-gradient(900px 600px at 15% 10%, color-mix(in oklab, var(--c4) 10%, transparent), transparent 60%),
+        radial-gradient(900px 600px at 85% 15%, color-mix(in oklab, var(--c3) 8%, transparent), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg-2));
-      background-attachment: fixed;
+      background-attachment:fixed;
     }
-    .container { width: min(1100px, 92%); margin: 0 auto; }
-    .topbar { position: fixed; top: 14px; right: 14px; display: flex; gap: 8px; align-items: center; z-index: 10; }
-    .toggle {
-      appearance: none; width: 56px; height: 32px; border-radius: 999px; position: relative;
-      border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      box-shadow: var(--shadow); cursor: pointer;
-    }
-    .toggle::after {
-      content: ""; position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
-      background: linear-gradient(180deg, #fff, #dfe6ff); transition: transform .25s ease;
-      box-shadow: 0 6px 12px rgba(0,0,0,.25);
-    }
-    [data-theme="light"] .toggle::after { transform: translateX(24px); background: linear-gradient(180deg, #0f1330, #2b356e); }
-    .toggle-label { font-size: 12px; color: var(--muted); user-select: none; }
+    .container{width:min(1100px,92%); margin:0 auto}
+    .topbar{position:fixed; top:14px; right:14px; display:flex; gap:8px; align-items:center; z-index:10}
+    .toggle{appearance:none; width:56px; height:32px; border-radius:999px; position:relative; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); cursor:pointer}
+    .toggle::after{content:""; position:absolute; top:3px; left:3px; width:26px; height:26px; border-radius:50%; background:linear-gradient(180deg,#fff,#dfe6ff); transition:transform .25s ease}
+    [data-theme="light"] .toggle::after{transform:translateX(24px); background:linear-gradient(180deg,#0f1330,#2b356e)}
+    .toggle-label{font-size:12px; color:var(--muted); user-select:none}
 
-    header.hero { padding: 108px 0 56px; text-align: center; position: relative; }
-    .brandline { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px;
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-    }
-    .infinity { width: 30px; height: 30px; opacity: .95; }
-    .wordmark { width: clamp(220px, 44vw, 520px); height: auto; filter: drop-shadow(0 12px 24px rgba(0,0,0,.3)); }
-    .tagline { margin-top: 10px; color: var(--muted); font-weight: 600; letter-spacing: .2px; }
-    .hero-sub { max-width: 900px; margin: 22px auto 0; line-height: 1.7; color: color-mix(in oklab, var(--text) 82%, transparent); }
-    .cta { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      color: var(--text); font-weight: 600; letter-spacing: .2px; box-shadow: var(--shadow);
-      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--c1) 30%, var(--border)); box-shadow: 0 14px 36px color-mix(in oklab, var(--c2) 30%, transparent); }
-    .btn.primary { border: none; background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3)); color: white; }
-
-    .section { padding: 64px 0; }
-    .divider { height: 1px; margin: 22px auto; width: min(900px, 90%);
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 22px; }
-    .card { background: linear-gradient(180deg, var(--card), var(--card-2)); border: 1px solid var(--border); padding: 22px; border-radius: 16px; }
-
-    /* Install prompt button */
-    .install-btn {
-      position: fixed; bottom: 20px; right: 20px;
-      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
-      background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3));
-      color: #fff; font-weight: 600; display: none; z-index: 20; box-shadow: var(--shadow);
-    }
-    .install-btn.show { display: inline-block; }
-
-    footer { border-top: 1px solid var(--border); padding: 24px 0 56px; color: var(--muted); font-size: 14px; }
+    header.hero{padding:98px 0 56px; text-align:center}
+    .brandline{display:inline-flex; align-items:center; gap:14px}
+    .infinity{width:36px; height:36px; opacity:.95}
+    .wordmark{width:clamp(300px,48vw,660px); height:auto}
+    .wordmark-fallback{margin:0; font-family:'Exo 2',sans-serif; font-weight:800; letter-spacing:.5px; font-size:clamp(36px,7vw,64px); background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3)); -webkit-background-clip:text; background-clip:text; color:transparent; display:none;}
+    .tagline{margin-top:14px; font-weight:700; letter-spacing:.25px; color:color-mix(in oklab, var(--text) 90%, transparent);}
+    .hero-sub{max-width:980px; margin:22px auto 0; line-height:1.75; color:color-mix(in oklab, var(--text) 82%, transparent)}
+    .hero-sub p{margin:0 0 14px 0}
+    .hero-sub .closing{margin-top:8px; font-weight:700}
+    .cta{margin-top:28px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+    .btn{padding:12px 18px; border-radius:14px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color:var(--text); font-weight:700}
+    .btn.primary{border:none; color:#fff; background:linear-gradient(90deg, var(--c1), var(--c2), var(--c3))}
+    .section{padding:64px 0}
+    .divider{height:1px; margin:22px auto; width:min(900px,90%); background:linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent)}
+    .cards{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:18px; margin-top:22px}
+    .card{background:linear-gradient(180deg, color-mix(in oklab, var(--bg) 86%, #ffffff 14%), color-mix(in oklab, var(--bg-2) 86%, #ffffff 14%)); border:1px solid var(--border); padding:22px; border-radius:16px}
+    footer{border-top:1px solid var(--border); padding:24px 0 56px; color:var(--muted); font-size:14px}
   </style>
 </head>
 <body>
@@ -137,15 +91,19 @@
     <div class="container">
       <div class="brandline">
         <img class="infinity" src="infinity.svg" alt="EZYByte infinity symbol" />
-        <img class="wordmark" src="ezybyte-wordmark.svg" alt="EZYByte wordmark" />
+        <img class="wordmark" src="ezybyte-wordmark.svg" alt="EZYByte wordmark" onerror="this.style.display='none'; document.querySelector('.wordmark-fallback').style.display='block';" />
+        <h1 class="wordmark-fallback">EZYByte</h1>
       </div>
+
       <div class="tagline">Humanly Intelligent. Powered by Artificial Intelligence.</div>
 
-      <p class="hero-sub">
-        In a world accelerating toward <strong>Exa-, Zetta-, and Yotta-scale</strong> data,
-        <strong>EZYByte</strong> unites the limitless power of AI with the intuition and empathy of human design.
-        We don’t just build systems that think faster — we build systems that think with purpose.
-      </p>
+      <div class="hero-sub">
+        <p>In a world accelerating toward <strong>Exa-, Zetta-, and Yotta-scale</strong> data, <strong>EZYByte</strong> was founded on a single belief:</p>
+        <p><strong>Technology should feel human — even when it’s powered by machines.</strong></p>
+        <p><strong>EZYByte</strong> unites the limitless power of AI with the intuition and empathy of human design.<br/>We don’t just build systems that think faster — we build systems that think with purpose.</p>
+        <p>Our mission is not to outsmart people, but to empower them.<br/>Because true progress lies at the intersection of <strong>Artificial Intelligence</strong> and <strong>Human Intelligence</strong>.</p>
+        <p class="closing"><strong>EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.</strong></p>
+      </div>
 
       <div class="cta">
         <a class="btn primary" href="mailto:connect@ezybyte.com">Contact Us</a>
@@ -154,108 +112,5 @@
       </div>
     </div>
   </header>
-
-  <main>
-    <section class="section container" id="products">
-      <h2>Products</h2>
-      <div class="divider"></div>
-      <div class="cards">
-        <div class="card"><strong>EZYCore:</strong> Cloud-native AI runtime for agents, tools, and workflows.</div>
-        <div class="card"><strong>EZYFlow:</strong> Visual orchestration of data pipelines and automations.</div>
-        <div class="card"><strong>EZYEdge:</strong> Real-time inference at the edge with sync to cloud.</div>
-        <div class="card"><strong>EZYView:</strong> Analytics & visualization components for instant insight.</div>
-      </div>
-    </section>
-
-    <section class="section container" id="team">
-      <h2>Team</h2>
-      <div class="divider"></div>
-      <div class="cards">
-        <div class="card"><strong>Engineering:</strong> Distributed systems, ML, and data infrastructure.</div>
-        <div class="card"><strong>Design:</strong> Human-centered UX for clarity, trust, and speed.</div>
-        <div class="card"><strong>Operations:</strong> Security, reliability, and scale from day one.</div>
-      </div>
-    </section>
-
-    <section class="section container" id="careers">
-      <h2>Careers</h2>
-      <div class="divider"></div>
-      <div class="cards">
-        <div class="card"><strong>Founding Engineer (AI):</strong> Agents, tool-use, evals.</div>
-        <div class="card"><strong>Product Designer:</strong> Data-first workflows, multi-modal interfaces.</div>
-        <div class="card"><strong>DevRel/Docs:</strong> Guides, templates, sample apps and SDKs.</div>
-      </div>
-      <p class="hero-sub" style="text-align:center; margin-top:16px">Interested? Email <a href="mailto:connect@ezybyte.com">connect@ezybyte.com</a>.</p>
-    </section>
-
-    <section class="section container" id="contact">
-      <h2>Contact</h2>
-      <div class="divider"></div>
-      <p class="hero-sub" style="max-width:820px; margin: 0 auto; text-align:center">
-        Partnerships, pilots, or press — we’d love to talk.<br/>
-        <a class="btn" href="mailto:connect@ezybyte.com" style="margin-top:14px; display:inline-block">Email: connect@ezybyte.com</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div>© 2025-10-16 EZYByte • <span style="opacity:.85">Humanly Intelligent • AI-Powered</span></div>
-      <div style="margin-top:8px">
-        <a href="mailto:connect@ezybyte.com">connect@ezybyte.com</a> •
-        <a href="https://ezybyte-com.github.io" target="_blank" rel="noopener">ezybyte-com.github.io</a>
-      </div>
-    </div>
-  </footer>
-
-  <button id="installBtn" class="install-btn" title="Install EZYByte">Install EZYByte</button>
-
-  <script>
-    // --- Theme init + toggle + favicon swap fallback ---
-    (function() {
-      const root = document.documentElement;
-      const toggle = document.getElementById('themeToggle');
-      const stored = localStorage.getItem('ezybyte-theme');
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      if (stored === 'light' || (stored === null && prefersLight)) {
-        root.setAttribute('data-theme', 'light'); toggle.checked = true;
-      } else { root.setAttribute('data-theme', 'dark'); toggle.checked = false; }
-      toggle.addEventListener('change', () => {
-        const theme = toggle.checked ? 'light' : 'dark';
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem('ezybyte-theme', theme);
-        setFavicon(theme);
-      });
-      function setFavicon(theme) {
-        const dark = document.getElementById('favicon-dark');
-        const light = document.getElementById('favicon-light');
-        if (!dark || !light) return;
-        if (theme === 'light') { light.media = 'all'; dark.media = 'not all'; }
-        else { dark.media = 'all'; light.media = 'not all'; }
-      }
-      setFavicon(root.getAttribute('data-theme') || 'dark');
-    })();
-
-    // --- 1 line SW registration (do not modify) ---
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
-
-    // --- Install prompt handler ---
-    let deferredPrompt = null;
-    const installBtn = document.getElementById('installBtn');
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      installBtn.classList.add('show');
-    });
-    installBtn.addEventListener('click', async () => {
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      const choice = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-      installBtn.classList.remove('show');
-      console.log('Install prompt:', choice && choice.outcome);
-    });
-    window.addEventListener('appinstalled', () => console.log('EZYByte installed'));
-  </script>
 </body>
 </html>
