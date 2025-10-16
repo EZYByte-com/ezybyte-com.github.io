@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.</title>
+  <meta name="description" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence. Technology that feels human, even at Yotta-scale." />
+  <meta name="theme-color" content="#0b1020">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Exo+2:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-2: #121a36;
+      --text: #e9ecf4;
+      --muted: #b6bdd5;
+      --card: #161c3a;
+      --card-2: #0f1530;
+      --border: rgba(255,255,255,.08);
+      --c1: #2979FF; --c2: #7E57C2; --c3: #FF3FD1; --c4: #00E5FF;
+      --wm-c1: var(--c1); --wm-c2: var(--c2); --wm-c3: var(--c3);
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    [data-theme="light"] {
+      --bg: #f7f8ff;
+      --bg-2: #ffffff;
+      --text: #0f1330;
+      --muted: #4a5277;
+      --card: #ffffff;
+      --card-2: #f2f4ff;
+      --border: rgba(0,0,0,.08);
+      --shadow: 0 12px 36px rgba(9,12,40,.12);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 600px at 15% 10%, color-mix(in oklab, var(--c4) 12%, transparent), transparent 60%),
+        radial-gradient(900px 600px at 85% 15%, color-mix(in oklab, var(--c3) 10%, transparent), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+      background-attachment: fixed;
+    }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    /* Header */
+    header.hero { padding: 88px 0 56px; text-align: center; position: relative; }
+    .topbar {
+      position: absolute; inset: 12px 12px auto auto; display: flex; gap: 8px; align-items: center;
+    }
+    .toggle {
+      appearance: none; width: 56px; height: 32px; border-radius: 999px; position: relative;
+      border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: var(--shadow); cursor: pointer;
+    }
+    .toggle::after {
+      content: ""; position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
+      background: linear-gradient(180deg, #fff, #dfe6ff); transition: transform .25s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,.25);
+    }
+    [data-theme="light"] .toggle::after { transform: translateX(24px); background: linear-gradient(180deg, #0f1330, #2b356e); }
+    .toggle-label { font-size: 12px; color: var(--muted); user-select: none; }
+    /* Brand */
+    .brand { display: grid; gap: 10px; justify-items: center; }
+    .wordmark { width: clamp(200px, 60vw, 560px); height: auto; filter: drop-shadow(0 12px 24px rgba(0,0,0,.3)); }
+    .tagline { color: var(--muted); font-weight: 600; letter-spacing: .2px; }
+    .hero-sub { max-width: 900px; margin: 22px auto 0; line-height: 1.7; color: color-mix(in oklab, var(--text) 82%, transparent); }
+    /* CTA */
+    .cta { margin-top: 28px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      color: var(--text); font-weight: 600; letter-spacing: .2px; box-shadow: var(--shadow);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: color-mix(in oklab, var(--c1) 30%, var(--border)); box-shadow: 0 14px 36px color-mix(in oklab, var(--c2) 30%, transparent); }
+    .btn.primary { border: none; background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3)); color: white; }
+    /* Section cards placeholder (for future additions) */
+    .section { padding: 64px 0; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 22px; }
+    .card { background: linear-gradient(180deg, var(--card), var(--card-2)); border: 1px solid var(--border); padding: 22px; border-radius: 16px; }
+    .divider { height: 1px; margin: 18px 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); }
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 24px 0 56px; color: var(--muted); font-size: 14px; }
+  </style>
+
+  <link id="favicon-dark" rel="icon" type="image/svg+xml" href="favicon-dark.svg" media="(prefers-color-scheme: dark)">
+  <link id="favicon-light" rel="icon" type="image/svg+xml" href="favicon-light.svg" media="(prefers-color-scheme: light)">
+
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
+  <meta property="og:description" content="Technology that feels human, even at Yotta-scale.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://ezybyte-com.github.io/">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EZYByte — Humanly Intelligent. Powered by Artificial Intelligence.">
+  <meta name="twitter:description" content="Technology that feels human, even at Yotta-scale.">
+  <meta name="twitter:image" content="og-image.png">
+
+</head>
+<body>
+  <header class="hero">
+    <div class="topbar">
+      <span class="toggle-label">Dark</span>
+      <input id="themeToggle" class="toggle" type="checkbox" aria-label="Theme toggle" />
+      <span class="toggle-label">Light</span>
+    </div>
+    <div class="container brand">
+      <img src="infinity.svg" alt="" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;opacity:.9" /><img class="wordmark" src="ezybyte-wordmark.svg" alt="EZYByte wordmark" />
+      <div class="tagline">Humanly Intelligent. Powered by Artificial Intelligence.</div>
+      <p class="hero-sub">
+        In a world accelerating toward <strong>Exa-, Zetta-, and Yotta-scale</strong> data, <strong>EZYByte</strong>
+        unites the limitless power of AI with the intuition and empathy of human design.
+        We don’t just build systems that think faster — we build systems that think with purpose.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:connect@ezybyte.com">Contact Us</a>
+        <a class="btn" href="https://github.com/ezybyte-com" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://ezybyte-com.github.io" target="_blank" rel="noopener">Docs / Site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h2>What We Build</h2>
+      <div class="divider"></div>
+      <div class="cards">
+        <div class="card"><strong>AI Systems & Agents:</strong> Human-centered AI that reasons, plans, and adapts.</div>
+        <div class="card"><strong>Automation & Orchestration:</strong> From data pipelines to workflows, zero friction.</div>
+        <div class="card"><strong>Cloud & Edge Intelligence:</strong> Scalable, resilient, efficient — from Exa to Yotta.</div>
+        <div class="card"><strong>Analytics & Visualization:</strong> From signals to stories: insight for every stakeholder.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025-10-16 EZYByte • <span style="opacity:.85">Humanly Intelligent • AI-Powered</span></div>
+      <div style="margin-top:8px">
+        <a href="mailto:connect@ezybyte.com">connect@ezybyte.com</a> •
+        <a href="https://ezybyte-com.github.io" target="_blank" rel="noopener">ezybyte-com.github.io</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const stored = localStorage.getItem('ezybyte-theme');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      // Initialize
+      if (stored === 'light' || (stored === null && prefersLight)) {
+        root.setAttribute('data-theme', 'light');
+        toggle.checked = true;
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        toggle.checked = false;
+      }
+      // Listen
+      toggle.addEventListener('change', () => {
+        const theme = toggle.checked ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('ezybyte-theme', theme);
+      });
+    })();
+  
+  // Fallback favicon swap based on explicit theme selection
+  (function() {
+    const setFavicon = (theme) => {
+      const dark = document.getElementById('favicon-dark');
+      const light = document.getElementById('favicon-light');
+      if (!dark || !light) return;
+      if (theme === 'light') {
+        light.media = 'all';
+        dark.media = 'not all';
+      } else {
+        dark.media = 'all';
+        light.media = 'not all';
+      }
+    };
+    const root = document.documentElement;
+    const theme = root.getAttribute('data-theme') || 'dark';
+    setFavicon(theme);
+    const toggle = document.getElementById('themeToggle');
+    if (toggle) {
+      toggle.addEventListener('change', () => setFavicon(toggle.checked ? 'light' : 'dark'));
+    }
+  })();
+
+  </script>
+</body>
+</html>

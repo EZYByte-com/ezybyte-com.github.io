@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2979FF"/>
+      <stop offset="50%" stop-color="#7E57C2"/>
+      <stop offset="100%" stop-color="#FF3FD1"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect fill="none" width="100%" height="100%"/>
+  <!-- Infinity loop path (two mirrored loops) -->
+  <path d="M12,32
+           C12,24 18,18 26,18
+           C30,18 34,20 38,24
+           C42,28 46,32 50,32
+           C54,32 56,29 56,26
+           C56,20 51,16 46,16
+           C41,16 36,19 32,24
+           C28,29 23,32 18,32
+           C14,32 12,29 12,26
+           Z"
+        fill="none" stroke="url(#grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#glow)"/>
+</svg>

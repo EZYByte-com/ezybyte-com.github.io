@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="120" viewBox="0 0 560 120">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="var(--wm-c1, #2979FF)"/>
+      <stop offset="50%" stop-color="var(--wm-c2, #7E57C2)"/>
+      <stop offset="100%" stop-color="var(--wm-c3, #FF3FD1)"/>
+    </linearGradient>
+  </defs>
+  <rect fill="none" width="100%" height="100%"/>
+  <g fill="url(#g)">
+    <text x="0" y="84" font-family="Exo 2, Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+          font-weight="800" font-size="84" letter-spacing="1">EZYByte</text>
+  </g>
+</svg>
